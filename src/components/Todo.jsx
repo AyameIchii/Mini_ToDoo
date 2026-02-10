@@ -25,7 +25,7 @@ const Todo = () => {
     setTodoList(prev => [...prev, newTodo])
     inputRef.current.value = ""
   }
-
+// callback về chao
   const deleteTodo = (id) => {
     setTodoList(prev => prev.filter(todo => todo.id !== id))
   }
@@ -83,6 +83,7 @@ const Todo = () => {
       <div>
         {todoList.map((item, index) => {
           return (
+            //truyền từ cha xuống con
             <TodoItems
               key={index}
               text={item.text}
